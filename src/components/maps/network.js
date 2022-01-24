@@ -1,12 +1,13 @@
 const express = require('express');
+const { authentication } = require('../../middleware/authentication');
 const { searchRestaurant } = require('./controller');
 
 const router = express.Router();
 
-router.get('/city', async (req, res) => {
+router.get('/city', authentication, async (req, res) => {
   try {
-    const { name } = req.query;
-    const responseMaps = await searchRestaurant(name);
+    const { cityName } = req.query;
+    const responseMaps = await searchRestaurant(cityName);
     res.status(200).send({
       responseMaps,
     });

@@ -41,12 +41,19 @@
 
 1. Create an `.env` file with the following environment variables.
 
+   | name           |     value      |
+   | -------------- | :------------: |
+   | PORT           |      4000      |
+   | JWT_SECRET_KEY | JWT secret key |
+   | API_KEY_MAPS   |  API_KEY_MAPS  |
+   | URL_API        |    URL_API     |
+
+   CONECTION DB
+
    | name              |        value        |
    | ----------------- | :-----------------: |
-   | PORT              |        4000         |
    | CLIENT_DB         |  db client sqlite3  |
    | FILENAME_DATABASE | connection filename |
-   | JWT_SECRET_KEY    |   JWT secret key    |
 
 2. Run the following command
 
